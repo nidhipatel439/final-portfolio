@@ -67,7 +67,7 @@ export const projects: Project[] = [
     description:
       "A sample timesheet tracker that users can track their assignments/project time it taken to finish it. In this application user can create/remove the task, start/stop timer and to record the total time for their whole assignment/project.",
     imageSrc: "bg-humber-timesheet-tracker",
-    techStack: ["React", "Bootstrap", "NodeJS"],
+    techStack: ["HTML5", "CSS3", "Bootstrap", "JavaScript"],
   },
   {
     title: "Weather Application",
@@ -75,7 +75,7 @@ export const projects: Project[] = [
     description:
       "A simple weather application made with HTML, CSS and JavaScript to demonstrate the animation skills. A responsive animated website built using HTML, CSS with Bulma framework.",
     imageSrc: "bg-weather",
-    techStack: ["React", "Bootstrap", "NodeJS"],
+    techStack: ["HTML5", "CSS3", "Bulma", "JavaScript"],
   },
   {
     title: "Make(things)UP",
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     description:
       "This is a mock e-commerce website for the makeup products. This website utilizes two apis one for fetching different makeup products information and second for the convert the currency rate.",
     imageSrc: "bg-makethingsup",
-    techStack: ["React", "Bootstrap", "NodeJS"],
+    techStack: ["ExpressJS", "NodeJS", "Bootstrap"],
   },
   {
     title: "Full-stack Portfolio",

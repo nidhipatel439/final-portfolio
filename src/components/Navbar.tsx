@@ -1,6 +1,6 @@
 import React, { PropsWithChildren, useContext, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { FaSun, FaMoon } from "react-icons/fa";
+import { BsSunFill, BsMoonStarsFill } from "react-icons/bs";
 import { DarkModeContext } from "../context/DarkMode";
 const NavLink: React.FC<PropsWithChildren<{ href: string }>> = ({
   children,
@@ -16,9 +16,15 @@ const NavLink: React.FC<PropsWithChildren<{ href: string }>> = ({
 const DarkModeToggle = () => {
   const { darkMode, setDarkMode } = useContext(DarkModeContext);
   return darkMode ? (
-    <FaSun onClick={() => setDarkMode(false)} />
+    <BsSunFill
+      onClick={() => setDarkMode(false)}
+      className="hover:scale-150 ease-in-out duration-500"
+    />
   ) : (
-    <FaMoon onClick={() => setDarkMode(true)} />
+    <BsMoonStarsFill
+      onClick={() => setDarkMode(true)}
+      className="hover:scale-150 ease-in-out duration-500"
+    />
   );
 };
 
@@ -36,11 +42,11 @@ export const Navbar = () => {
           </div>
           <div className="hidden md:block">
             <ul className="flex">
-              <NavLink href="about-section">About</NavLink>
-              <NavLink href="experience-section">Experience</NavLink>
-              <NavLink href="project-section">Projects</NavLink>
-              <NavLink href="education-section">Education</NavLink>
-              <NavLink href="skill-section">Skills</NavLink>
+              <NavLink href="about">About</NavLink>
+              <NavLink href="experience">Experience</NavLink>
+              <NavLink href="project">Projects</NavLink>
+              <NavLink href="education">Education</NavLink>
+              <NavLink href="skill">Skills</NavLink>
             </ul>
           </div>
           <DarkModeToggle />
@@ -54,11 +60,11 @@ export const Navbar = () => {
             show ? "" : "hidden"
           } text-center transition ease-in-out duration-300`}
         >
-          <NavLink href="about-section">About</NavLink>
-          <NavLink href="experience-section">Experience</NavLink>
-          <NavLink href="project-section">Projects</NavLink>
-          <NavLink href="education-section">Education</NavLink>
-          <NavLink href="skill-section">Skills</NavLink>
+          <NavLink href="about">About</NavLink>
+          <NavLink href="experience">Experience</NavLink>
+          <NavLink href="project">Projects</NavLink>
+          <NavLink href="education">Education</NavLink>
+          <NavLink href="skill">Skills</NavLink>
         </ul>
       </div>
     </div>

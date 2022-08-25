@@ -5,7 +5,7 @@ import Layout from "./Layout";
 const Skills: React.FC<{ skills: Skill[] }> = ({ skills }) => {
   return (
     <Layout>
-      <div id="skill-section" className="absolute -top-10"></div>
+      <div id="skill" className="absolute -top-10"></div>
 
       <Heading>Skills</Heading>
       <div className="grid grid-cols-2 lg:grid-cols-5 md:grid-cols-4 max-w-lg md:max-w-full mx-auto gap-4 place-content-center">

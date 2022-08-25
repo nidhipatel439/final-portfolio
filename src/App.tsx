@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect } from "react";
 import About from "./components/About";
 import { Education } from "./components/Education";
 import { Experience } from "./components/Experience";
@@ -15,7 +15,6 @@ import {
   projects,
   skills,
 } from "./content";
-import { DarkModeContext } from "./context/DarkMode";
 
 const SectionLine = () => (
   <hr className="border-black border-t-4 m-2 dark:border-white" />

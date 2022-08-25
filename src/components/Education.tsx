@@ -38,7 +38,7 @@ export const Education: React.FC<{ education: Education[] }> = ({
 }) => {
   return (
     <Layout>
-      <div id="education-section" className="absolute -top-10"></div>
+      <div id="education" className="absolute -top-10"></div>
       <Heading>Education</Heading>
       <div className="max-w-lg mx-auto">
         {education.map((edu, index) => (

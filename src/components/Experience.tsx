@@ -42,7 +42,7 @@ export const Experience: React.FC<{ experiences: Experience[] }> = ({
 }) => {
   return (
     <Layout>
-      <div id="experience-section" className="absolute -top-10"></div>
+      <div id="experience" className="absolute -top-10"></div>
       <Heading>Experience</Heading>
       <div className="max-w-3xl mx-auto">
         {experiences.map((exp, index) => (

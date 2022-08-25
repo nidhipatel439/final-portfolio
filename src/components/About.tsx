@@ -22,7 +22,7 @@ const SocialButtons = () => (
 const About: React.FC<{ description: string }> = ({ description }) => {
   return (
     <Layout>
-      <div id="about-section" className="absolute -top-10"></div>
+      <div id="about" className="absolute -top-10"></div>
       <div className="flex flex-col md:flex-row items-center">
         <div className="flex items-center justify-center">
           <img
@@ -51,10 +51,14 @@ const About: React.FC<{ description: string }> = ({ description }) => {
           <p className="mb-5 md:text-xl text-lg">{description}</p>
           <SocialButtons />
           <div className="flex items-center justify-between">
-            <button className="border border-black p-3 hover:bg-black hover:text-white dark:bg-white dark:text-black dark:hover:text-white dark:hover:bg-black dark:hover:border-white">
+            <a
+              href="../src/assets/Nidhi_CV.pdf"
+              target="_blank"
+              className="border border-black p-3 hover:bg-black hover:text-white dark:bg-white dark:text-black dark:hover:text-white dark:hover:bg-black dark:hover:border-white"
+            >
               Resume
               <BsFillArrowDownCircleFill className="inline ml-3" />
-            </button>
+            </a>
           </div>
         </div>
       </div>
