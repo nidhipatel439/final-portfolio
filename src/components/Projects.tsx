@@ -30,14 +30,18 @@ const Project: React.FC<{
     <div
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className="border border-black  text-white max-w-[500px] my-2 mx-auto"
+      className="border border-black  text-white max-w-[500px] my-2 mx-auto flex"
     >
       <div
         className={`${
-          hover ? "bg-black" : "bg-hero-pattern"
-        } bg-no-repeat bg-cover text-center p-4 duration-700 transition ease-in-out`}
+          hover ? "bg-black" : imageSrc
+        } bg-no-repeat bg-cover md:bg-center text-center p-4 duration-700 transition ease-in-out`}
       >
-        <div className={`${hover ? "" : "text-transparent"}`}>
+        <div
+          className={`${
+            hover ? "" : "text-transparent"
+          } flex flex-col justify-center content-between h-full`}
+        >
           <div className="flex align-middle justify-center">
             <span className="text-xl font-semibold">{title}</span>
             <a className="ml-2" href={projectLink} target="_blank">

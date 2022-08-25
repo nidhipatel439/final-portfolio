@@ -15,8 +15,7 @@ import vuejs from "../assets/logo/vuejs.svg";
 import bootstrap from "../assets/logo/bootstrap.svg";
 
 export const description =
-  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit laboriosam totam eligendi voluptas. Beatae ipsa hic molestiae numquam doloribus porro ipsum! Quia ad beatae laboriosam dolores eaque iusto officia et?";
-
+  "Welcome to my Web Space. I like creating interactive applications and experiences on the web.";
 export const experience: Experience[] = [
   {
     title: "Freelance Web Developer",
@@ -63,38 +62,36 @@ export const education: Education[] = [
 
 export const projects: Project[] = [
   {
-    title: "Portfolio",
-    projectLink: "http://nidhi439.epizy.com",
+    title: "Humber Timesheet Tracker",
+    projectLink: "https://nidhipatel439.github.io/humber_timesheet_tracker/",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde esse iure voluptate cupiditate. Voluptas temporibus officia ratione, enim pariatur in, quo, harum alias voluptatum consequatur iure? Consequatur laborum quaerat necessitatibus.",
-    imageSrc:
-      "https://apod.nasa.gov/apod/image/2202/AuroraPillars_Correia_4898.jpg",
+      "A sample timesheet tracker that users can track their assignments/project time it taken to finish it. In this application user can create/remove the task, start/stop timer and to record the total time for their whole assignment/project.",
+    imageSrc: "bg-humber-timesheet-tracker",
     techStack: ["React", "Bootstrap", "NodeJS"],
   },
   {
-    title: "Portfolio",
-    projectLink: "http://nidhi439.epizy.com",
+    title: "Weather Application",
+    projectLink: "https://nidhipatel439.github.io/Weather-Application/",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde esse iure voluptate cupiditate. Voluptas temporibus officia ratione, enim pariatur in, quo, harum alias voluptatum consequatur iure? Consequatur laborum quaerat necessitatibus.",
-    imageSrc:
-      "https://apod.nasa.gov/apod/image/2202/AuroraPillars_Correia_4898.jpg",
+      "A simple weather application made with HTML, CSS and JavaScript to demonstrate the animation skills. A responsive animated website built using HTML, CSS with Bulma framework.",
+    imageSrc: "bg-weather",
     techStack: ["React", "Bootstrap", "NodeJS"],
   },
   {
-    title: "Portfolio",
-    projectLink: "http://nidhi439.epizy.com",
+    title: "Make(things)UP",
+    projectLink: "https://github.com/nidhipatel439/makeup",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde esse iure voluptate cupiditate. Voluptas temporibus officia ratione, enim pariatur in, quo, harum alias voluptatum consequatur iure? Consequatur laborum quaerat necessitatibus.",
-    imageSrc: "http://placekitten.com/300",
+      "This is a mock e-commerce website for the makeup products. This website utilizes two apis one for fetching different makeup products information and second for the convert the currency rate.",
+    imageSrc: "bg-makethingsup",
     techStack: ["React", "Bootstrap", "NodeJS"],
   },
   {
-    title: "Portfolio",
-    projectLink: "http://nidhi439.epizy.com",
+    title: "Full-stack Portfolio",
+    projectLink: "http://nidhi439.epizy.com/php-cms",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde esse iure voluptate cupiditate. Voluptas temporibus officia ratione, enim pariatur in, quo, harum alias voluptatum consequatur iure? Consequatur laborum quaerat necessitatibus.",
-    imageSrc: "http://placekitten.com/300",
-    techStack: ["React", "Bootstrap", "NodeJS"],
+      "This is a full-stack application made with Php and MySQL. It was part of a group assignment where our team build the content management system from scratch with php and MySQL. Front-end development was done individually to fit their needs.",
+    imageSrc: "bg-portfolio",
+    techStack: ["Bootstrap", "MySQL", "Php"],
   },
 ];
 

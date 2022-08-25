@@ -17,7 +17,10 @@ module.exports = {
         'sans': ['Jura', ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
-        'hero-pattern': "url('https://apod.nasa.gov/apod/image/2202/AuroraPillars_Correia_4898.jpg')",
+        'humber-timesheet-tracker': "url('/src/assets/project/humber-timesheet-tracker.png')",
+        'weather': "url('/src/assets/project/weather.gif')",
+        'makethingsup': "url('/src/assets/project/makethingsup.png')",
+        'portfolio': "url('/src/assets/project/portfolio.png')",
     },}
   },
   plugins: [],
