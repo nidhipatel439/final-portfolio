@@ -26,7 +26,7 @@ const About: React.FC<{ description: string }> = ({ description }) => {
       <div className="flex flex-col md:flex-row items-center">
         <div className="flex items-center justify-center">
           <img
-            className="rounded-full md:w-[700px] w-[300px]"
+            className="rounded-full md:w-[450px] w-[300px] lg:w-[330px]"
             src={profile}
             alt="profile photo"
           />
@@ -48,7 +48,7 @@ const About: React.FC<{ description: string }> = ({ description }) => {
               }}
             />
           </div>
-          <p className="mb-5">{description}</p>
+          <p className="mb-5 md:text-xl text-lg">{description}</p>
           <SocialButtons />
           <div className="flex items-center justify-between">
             <button className="border border-black p-3 hover:bg-black hover:text-white dark:bg-white dark:text-black dark:hover:text-white dark:hover:bg-black dark:hover:border-white">

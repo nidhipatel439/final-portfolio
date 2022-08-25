@@ -28,7 +28,7 @@ const ExperienceCard: React.FC<{
       </div>
     </div>
     <div>
-      <ul className="list-disc p-3">
+      <ul className="list-disc p-3 md:text-lg">
         {responsibilities.map((each, index) => (
           <li key={index}>{each}</li>
         ))}

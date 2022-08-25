@@ -6,7 +6,7 @@ const NavLink: React.FC<PropsWithChildren<{ href: string }>> = ({
   children,
   href,
 }) => (
-  <li className="px-4 my-2">
+  <li className="px-4 my-2 md:text-lg">
     <a href={`#${href}`} className="hover:line-through">
       {children}
     </a>
@@ -26,8 +26,8 @@ export const Navbar = () => {
   const [show, setShow] = useState(false);
   return (
     <div className="z-10 mx-2 p-3 border-0 border-b-4 border-black sticky top-0 bg-orange-100 shadow-lg dark:bg-black dark:border-white">
-      <div className="md:mx-20 flex items-center justify-between">
-        <a href="/" className="font-bold">
+      <div className="lg:mx-20 md:mx-10 flex items-center justify-between">
+        <a href="/" className="font-bold md:text-xl">
           Nidhi Patel
         </a>
         <div className="flex items-center gap-2">
