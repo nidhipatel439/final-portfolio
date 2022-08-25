@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Heading from "./Heading";
-import { BsFillCursorFill, BsCursorFill } from "react-icons/bs";
+import { BsHourglassSplit, BsCursorFill } from "react-icons/bs";
+import Layout from "./Layout";
 
 const ExperienceCard: React.FC<{
   title: string;
@@ -8,56 +9,51 @@ const ExperienceCard: React.FC<{
   companyName: string;
   tenure: string;
   responsibilities: string[];
-}> = ({ title, location, companyName, tenure, responsibilities }) => {
-  return (
-    <div className=" p-3 my-2">
-      <div className="">
-        <div>
-          <p className="text-2xl">
-            {title} ({tenure})
-          </p>
-          <div className="font-semibold italic flex justify-between">
-            <div>{companyName}</div>
-            <div className="flex items-center gap-2">
-              <BsCursorFill className="inline" />
-              {location}
-            </div>
-          </div>
+}> = ({ title, location, companyName, tenure, responsibilities }) => (
+  <div className="p-3 my-2">
+    <div className="flex justify-between md:flex-row flex-col">
+      <div>
+        <p className="text-2xl">{title}</p>
+        <p className="italic font-semibold">{companyName}</p>
+      </div>
+      <div className="text-right">
+        <div className="flex items-center gap-2">
+          <BsCursorFill className="inline" />
+          {location}
+        </div>
+        <div className="flex items-center gap-2">
+          <BsHourglassSplit className="inline" />
+          {tenure}
         </div>
       </div>
-
-      <div>
-        <ul className="list-disc p-3">
-          {responsibilities.map((each) => (
-            <li>{each}</li>
-          ))}
-        </ul>
-      </div>
     </div>
-  );
-};
+    <div>
+      <ul className="list-disc p-3">
+        {responsibilities.map((each, index) => (
+          <li key={index}>{each}</li>
+        ))}
+      </ul>
+    </div>
+  </div>
+);
 
-export const Experience = () => {
+export const Experience: React.FC<{ experiences: Experience[] }> = ({
+  experiences,
+}) => {
   return (
-    <div className="p-3" id="experience-section">
+    <Layout>
+      <div id="experience-section" className="absolute -top-10"></div>
       <Heading>Experience</Heading>
-      <div>
-        <ExperienceCard
-          title="Full-Stack Developer"
-          companyName="Digital Science Web Technologies"
-          tenure="2018-2020"
-          location="India"
-          responsibilities={["hello", "world"]}
-        />
-        <hr className="border-black" />
-        <ExperienceCard
-          title="Data Engineer"
-          companyName="Facebook"
-          tenure="2021-2022"
-          location=" Canada"
-          responsibilities={["hello", "world"]}
-        />
+      <div className="max-w-3xl mx-auto">
+        {experiences.map((exp, index) => (
+          <React.Fragment key={index}>
+            <ExperienceCard {...exp} />
+            {index + 1 !== experiences.length && (
+              <hr className="border-black" />
+            )}
+          </React.Fragment>
+        ))}
       </div>
-    </div>
+    </Layout>
   );
 };

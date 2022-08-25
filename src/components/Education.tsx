@@ -1,6 +1,7 @@
 import React from "react";
 import Heading from "./Heading";
 import { BsCursorFill, BsHourglassSplit } from "react-icons/bs";
+import Layout from "./Layout";
 
 const EducationCard: React.FC<{
   degree: string;
@@ -10,14 +11,14 @@ const EducationCard: React.FC<{
   tenure: string;
 }> = ({ degree, location, institute, field, tenure }) => {
   return (
-    <div className="p-3 my-2">
-      <div className="flex justify-between">
+    <div className="p-3 my-2 ">
+      <div className="flex justify-between md:flex-row flex-col">
         <div>
           <p className="text-2xl">{field}</p>
           <p className="italic font-semibold">{degree}</p>
           <span className="">{institute}</span>
         </div>
-        <div className="text-right">
+        <div className="text-right sm:text-left">
           <div className="flex items-center gap-2">
             <BsCursorFill className="inline" />
             {location}
@@ -32,27 +33,23 @@ const EducationCard: React.FC<{
   );
 };
 
-export const Education = () => {
+export const Education: React.FC<{ education: Education[] }> = ({
+  education,
+}) => {
   return (
-    <div className="p-3 " id="education-section">
+    <Layout>
+      <div id="education-section" className="absolute -top-10"></div>
       <Heading>Education</Heading>
-      <div>
-        <EducationCard
-          degree="Bachelor of Engineering"
-          field="Information Technology"
-          institute="Gujarat Technological University"
-          tenure="2013-2017"
-          location="Ahmedabad, India"
-        />
-        <hr className="border-1 border-black" />
-        <EducationCard
-          degree="Ontario Graduate Certificate"
-          field="Web Development"
-          institute="Humber College"
-          tenure="2021-2022"
-          location="Toronto, Canada"
-        />
+      <div className="max-w-lg mx-auto">
+        {education.map((edu, index) => (
+          <React.Fragment key={index}>
+            <EducationCard {...edu} />
+            {index + 1 !== education.length && (
+              <hr className="border-1 border-black" />
+            )}
+          </React.Fragment>
+        ))}
       </div>
-    </div>
+    </Layout>
   );
 };

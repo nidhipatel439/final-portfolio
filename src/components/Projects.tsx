@@ -1,6 +1,7 @@
 import React, { PropsWithChildren, useState } from "react";
 import Heading from "./Heading";
 import { BsFillArrowUpRightSquareFill } from "react-icons/bs";
+import Layout from "./Layout";
 
 const Pill: React.FC<PropsWithChildren<{ hover: boolean; bg: string }>> = ({
   children,
@@ -29,7 +30,7 @@ const Project: React.FC<{
     <div
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className="border border-black my-5 text-white"
+      className="border border-black  text-white max-w-[500px] my-2 mx-auto"
     >
       <div
         className={`${
@@ -44,9 +45,9 @@ const Project: React.FC<{
             </a>
           </div>
           <p className="py-2">{description}</p>
-          <div className="">
-            {techStack.map((each) => (
-              <Pill bg="bg-green-600" hover={hover}>
+          <div>
+            {techStack.map((each, index) => (
+              <Pill key={index} bg="bg-green-600" hover={hover}>
                 {each}
               </Pill>
             ))}
@@ -57,31 +58,17 @@ const Project: React.FC<{
   );
 };
 
-const Projects = () => {
+const Projects: React.FC<{ projects: Project[] }> = ({ projects }) => {
   return (
-    <div className="p-3" id="project-section">
+    <Layout>
+      <div id="project-section" className="absolute -top-10"></div>
       <Heading>Projects</Heading>
-      <Project
-        title="Portfolio"
-        projectLink="http://nidhi439.epizy.com"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde esse
-          iure voluptate cupiditate. Voluptas temporibus officia ratione, enim
-          pariatur in, quo, harum alias voluptatum consequatur iure? Consequatur
-          laborum quaerat necessitatibus."
-        imageSrc="http://placekitten.com/300"
-        techStack={["React", "Bootstrap", "NodeJS"]}
-      />
-      <Project
-        title="Portfolio"
-        projectLink="http://nidhi439.epizy.com"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde esse
-          iure voluptate cupiditate. Voluptas temporibus officia ratione, enim
-          pariatur in, quo, harum alias voluptatum consequatur iure? Consequatur
-          laborum quaerat necessitatibus."
-        imageSrc="http://placekitten.com/300"
-        techStack={["React", "Bootstrap", "NodeJS"]}
-      />
-    </div>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 gap-6">
+        {projects.map((project, index) => (
+          <Project key={index} {...project} />
+        ))}
+      </div>
+    </Layout>
   );
 };
 

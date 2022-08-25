@@ -7,11 +7,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'sm': '800px',
+        // => @media (min-width: 576px) { ... }
+        'md' : '900px'
+      },
       fontFamily: {
         'sans': ['Jura', ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
-        'hero-pattern': "url('http://placekitten.com/300')",
+        'hero-pattern': "url('https://apod.nasa.gov/apod/image/2202/AuroraPillars_Correia_4898.jpg')",
     },}
   },
   plugins: [],
