@@ -49,7 +49,7 @@ export const Experience: React.FC<{ experiences: Experience[] }> = ({
           <React.Fragment key={index}>
             <ExperienceCard {...exp} />
             {index + 1 !== experiences.length && (
-              <hr className="border-black" />
+              <hr className="border-black dark:border-white" />
             )}
           </React.Fragment>
         ))}

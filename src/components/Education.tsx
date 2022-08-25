@@ -45,7 +45,7 @@ export const Education: React.FC<{ education: Education[] }> = ({
           <React.Fragment key={index}>
             <EducationCard {...edu} />
             {index + 1 !== education.length && (
-              <hr className="border-1 border-black" />
+              <hr className="border-black dark:border-white" />
             )}
           </React.Fragment>
         ))}

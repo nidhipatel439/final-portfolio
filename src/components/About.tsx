@@ -51,7 +51,7 @@ const About: React.FC<{ description: string }> = ({ description }) => {
           <p className="mb-5">{description}</p>
           <SocialButtons />
           <div className="flex items-center justify-between">
-            <button className="border border-black p-3 hover:bg-black hover:text-white">
+            <button className="border border-black p-3 hover:bg-black hover:text-white dark:bg-white dark:text-black dark:hover:text-white dark:hover:bg-black dark:hover:border-white">
               Resume
               <BsFillArrowDownCircleFill className="inline ml-3" />
             </button>

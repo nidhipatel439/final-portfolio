@@ -8,11 +8,11 @@ const Skills: React.FC<{ skills: Skill[] }> = ({ skills }) => {
       <div id="skill-section" className="absolute -top-10"></div>
 
       <Heading>Skills</Heading>
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 place-content-center">
+      <div className="grid grid-cols-2 lg:grid-cols-5 md:grid-cols-4 max-w-lg md:max-w-full mx-auto gap-4 place-content-center">
         {skills.map((each, index) => (
           <div
             key={index}
-            className="border border-black shadow-2xl p-2  flex flex-col items-center justify-center "
+            className="border border-black shadow-2xl p-2  flex flex-col items-center justify-center dark:border-white"
           >
             <img
               className={`hover:scale-125 ease-in-out duration-500`}

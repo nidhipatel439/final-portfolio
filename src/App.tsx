@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import About from "./components/About";
 import { Education } from "./components/Education";
 import { Experience } from "./components/Experience";
@@ -15,32 +15,39 @@ import {
   projects,
   skills,
 } from "./content";
+import { DarkModeContext } from "./context/DarkMode";
+
+const SectionLine = () => (
+  <hr className="border-black border-t-4 m-2 dark:border-white" />
+);
+
 function App() {
   useEffect(() => {
     Aos.init({
       duration: 1000,
     });
   }, []);
+
   return (
-    <div className=" bg-orange-50">
+    <div className="dark:bg-black dark:text-white bg-orange-50">
       <Navbar />
       <div data-aos="fade-up">
         <About description={description} />
-        <hr className="border-black border-t-4 m-2" />
+        <SectionLine />
       </div>
 
       <div data-aos="fade-up">
         <Experience experiences={experience} />
-        <hr className="border-black border-t-4 m-2" />
+        <SectionLine />
       </div>
 
       <div data-aos="fade-up">
         <Projects projects={projects} />
-        <hr className="border-black border-t-4 m-2" />
+        <SectionLine />
       </div>
       <div data-aos="fade-up">
         <Education education={education} />
-        <hr className="border-black border-t-4 m-2" />
+        <SectionLine />
       </div>
 
       <div data-aos="fade-up">
