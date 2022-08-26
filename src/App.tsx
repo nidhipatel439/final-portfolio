@@ -7,6 +7,7 @@ import { Navbar } from "./components/Navbar";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Aos from "aos";
+import ReactGA from "react-ga";
 import "aos/dist/aos.css";
 import {
   description,
@@ -25,6 +26,8 @@ function App() {
     Aos.init({
       duration: 1000,
     });
+
+    ReactGA.initialize("G-Q8PXEVQH1P");
   }, []);
 
   return (
