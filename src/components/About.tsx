@@ -4,6 +4,7 @@ import { FaGithubSquare, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import profile from "../assets/profile.png";
 import Layout from "./Layout";
 import TypewriterComponent from "typewriter-effect";
+import resume from "../assets/Nidhi_CV.pdf";
 
 const SocialButtons = () => (
   <div className="flex my-6 gap-4">
@@ -52,7 +53,7 @@ const About: React.FC<{ description: string }> = ({ description }) => {
           <SocialButtons />
           <div className="flex items-center justify-between">
             <a
-              href="../src/assets/Nidhi_CV.pdf"
+              href={resume}
               target="_blank"
               className="border border-black p-3 hover:bg-black hover:text-white dark:bg-white dark:text-black dark:hover:text-white dark:hover:bg-black dark:hover:border-white"
             >
