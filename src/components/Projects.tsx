@@ -30,12 +30,12 @@ const Project: React.FC<{
     <div
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className="border border-black dark:border-white  text-white max-w-[500px] my-2 mx-auto flex"
+      className="border border-black dark:border-white text-white aspect-[4/3] max-w-[500px]  my-2 mx-auto flex"
     >
       <div
         className={`${
           hover ? "bg-black" : imageSrc
-        } bg-no-repeat bg-cover md:bg-center  text-center p-4 duration-700 transition ease-in-out`}
+        } bg-no-repeat bg-cover md:bg-center  text-center p-2 duration-700 transition ease-in-out`}
       >
         <div
           className={`${
@@ -48,7 +48,7 @@ const Project: React.FC<{
               <BsFillArrowUpRightSquareFill className="inline hover:scale-125 ease-in-out duration-500" />
             </a>
           </div>
-          <p className="py-2">{description}</p>
+          <p className="py-1">{description}</p>
           <div>
             {techStack.map((each, index) => (
               <Pill key={index} bg="bg-green-600" hover={hover}>
@@ -67,7 +67,7 @@ const Projects: React.FC<{ projects: Project[] }> = ({ projects }) => {
     <Layout>
       <div id="project" className="absolute -top-10"></div>
       <Heading>Projects</Heading>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 grid-cols-1 gap-6">
         {projects.map((project, index) => (
           <Project key={index} {...project} />
         ))}

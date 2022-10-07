@@ -67,14 +67,7 @@ export const projects: Project[] = [
     description:
       "Full-stack Application that manages users’ courses and tasks along with features like time tracker, background music, timesheet CSV export, teacher dashboard, dark mode, and admin panel.",
     imageSrc: "bg-timesheet-tracker",
-    techStack: [
-      "React",
-      "NodeJS",
-      "TailwindCSS",
-      "OAuth",
-      "PostgreSQL",
-      "Prisma",
-    ],
+    techStack: ["React", "NodeJS", "OAuth", "PostgreSQL"],
   },
   {
     title: "Weather Application",
@@ -104,9 +97,9 @@ export const projects: Project[] = [
     title: "ChatRoom App",
     projectLink: "https://live-chat-6i8k.onrender.com/",
     description:
-      "This is a basic live chatroom application build with Node-ExpressJS backend with socket.io and React front-end with TypeScript. Simply choose a room id and name and have self destructive chat.",
+      "A live chatroom application build with Node-ExpressJS backend with socket.io and React front-end with TypeScript. Simply choose a room id and name and have self destructive chat.",
     imageSrc: "bg-chatroom",
-    techStack: ["React", "NodeJS", "ExpressJS", "Web-sockets", "TailwindCSS"],
+    techStack: ["React", "ExpressJS", "Web-sockets"],
   },
 ];
 
