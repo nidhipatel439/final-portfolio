@@ -16,7 +16,9 @@ export const DarkModeContext = createContext<{
 
 export const DarkModeProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const [darkMode, setDarkMode] = useState(
-    localStorage.theme === "dark" ? true : false
+    localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
   );
 
   useEffect(() => {
@@ -25,19 +27,6 @@ export const DarkModeProvider: React.FC<PropsWithChildren> = ({ children }) => {
     // Whenever the user explicitly chooses light mode
     localStorage.theme = darkMode ? "dark" : "light";
   }, [darkMode]);
-
-  useEffect(() => {
-    // console.log(localStorage.getItem("theme"));
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      setDarkMode(true);
-    } else {
-      setDarkMode(false);
-    }
-  }, []);
 
   return (
     <DarkModeContext.Provider value={{ darkMode, setDarkMode }}>

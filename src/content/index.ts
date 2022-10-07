@@ -62,12 +62,19 @@ export const education: Education[] = [
 
 export const projects: Project[] = [
   {
-    title: "Humber Timesheet Tracker",
-    projectLink: "https://nidhipatel439.github.io/humber_timesheet_tracker/",
+    title: "Timesheet Tracker",
+    projectLink: "https://timesheet-tracker.netlify.app/",
     description:
-      "A sample timesheet tracker that users can track their assignments/project time it taken to finish it. In this application user can create/remove the task, start/stop timer and to record the total time for their whole assignment/project.",
-    imageSrc: "bg-humber-timesheet-tracker",
-    techStack: ["HTML5", "CSS3", "Bootstrap", "JavaScript"],
+      "Full-stack Application that manages users’ courses and tasks along with features like time tracker, background music, timesheet CSV export, teacher dashboard, dark mode, and admin panel.",
+    imageSrc: "bg-timesheet-tracker",
+    techStack: [
+      "React",
+      "NodeJS",
+      "TailwindCSS",
+      "OAuth",
+      "PostgreSQL",
+      "Prisma",
+    ],
   },
   {
     title: "Weather Application",
@@ -92,6 +99,14 @@ export const projects: Project[] = [
       "This is a full-stack application made with Php and MySQL. It was part of a group assignment where our team build the content management system from scratch with php and MySQL. Front-end development was done individually to fit their needs.",
     imageSrc: "bg-portfolio",
     techStack: ["Bootstrap", "MySQL", "Php"],
+  },
+  {
+    title: "ChatRoom App",
+    projectLink: "https://live-chat-6i8k.onrender.com/",
+    description:
+      "This is a basic live chatroom application build with Node-ExpressJS backend with socket.io and React front-end with TypeScript. Simply choose a room id and name and have self destructive chat.",
+    imageSrc: "bg-chatroom",
+    techStack: ["React", "NodeJS", "ExpressJS", "Web-sockets", "TailwindCSS"],
   },
 ];
 
