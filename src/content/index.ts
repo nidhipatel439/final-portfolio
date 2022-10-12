@@ -70,6 +70,14 @@ export const projects: Project[] = [
     techStack: ["React", "NodeJS", "OAuth", "PostgreSQL"],
   },
   {
+    title: "The Chrome Dinosaur Game",
+    projectLink: "https://chrome-game.netlify.app/",
+    description:
+      "A world famous no internet dinosaur game build with the HTML, CSS and javascript.",
+    imageSrc: "bg-game",
+    techStack: ["HTML5", "CSS3", "JavaScript"],
+  },
+  {
     title: "Weather Application",
     projectLink: "https://nidhipatel439.github.io/Weather-Application/",
     description:

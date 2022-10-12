@@ -20,6 +20,7 @@ module.exports = {
         makethingsup: "url('/src/assets/project/makethingsup.png')",
         portfolio: "url('/src/assets/project/portfolio.png')",
         chatroom: "url('/src/assets/project/chatroom.png')",
+        game: "url('/src/assets/project/game.png')",
       },
     },
   },
