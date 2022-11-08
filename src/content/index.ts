@@ -20,12 +20,13 @@ export const experience: Experience[] = [
   {
     title: "Freelance Web Developer",
     location: "India",
-    tenure: "2020-Present",
+    tenure: "2020-2021",
     companyName: "N/A",
     responsibilities: [
       "Worked with various international clients from 5+ countries with new and ongoing projects",
-      "Development of Website with HTML, CSS, and JavaScript with a responsive-mobile first approach",
-      "Created SPA(s) with ReactJS and Server-side rendering apps with NodeJS using TypeScript and JavaScript",
+      "Implemented responsive and mobile-first development strategies in every project",
+      "Resolved issues in an existing project to meet the user requirements",
+      "Technologies: HTML, CSS, JavaScript, Bootstrap",
     ],
   },
   {
@@ -34,12 +35,12 @@ export const experience: Experience[] = [
     tenure: "2018-2021",
     companyName: "Digital Science Web Technologies Pvt. Ltd.",
     responsibilities: [
-      "Developing Single Page Web applications with modern JavaScript frameworks such as React, Bulma, etc.",
       "Researched and implemented correct coding practices for SEO, resulting in an average of 60% higher search engine rankings than previously",
       "Collaborated with a team of 10 developers for 8+ months on a major website redesign in Agile fashion",
+      "Followed SDLC-Agile Methodology and developed the website from the scratch. Worked closely with the client to ensure project requirements are met",
       "Maintained 30+ client websites and provided technical assistance to 100+ clients on a full-time basis",
-      "Implementing responsive and mobile-first development strategies in every project",
       "Used Git and GitHub for continuous and incremental development of the project",
+      "Technologies: HTML, CSS, JavaScript, ReactJS, Bootstrap",
     ],
   },
 ];
